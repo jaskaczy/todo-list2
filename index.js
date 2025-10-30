@@ -1,57 +1,60 @@
 let button = document.querySelector("#button");
 let inputArea = document.querySelector("#user-input");
 let taskBox = document.querySelector(".task-box");
-let tasks = [];
-let tasksList = document.querySelector(".task-grapper");
+const tasks = [
+             
+];
 
-button.addEventListener("click", () => {
-  if (inputArea.value !== "") {
-    createTask();
-    inputArea.value = "";
-    inputArea.placeholder = "Wpisz taska";
-  } else {
-    inputArea.placeholder = "Podaj taska !!!!!!!!!!!!!!!!!";
+
+
+
+button.addEventListener('click', ()=>{
+  let obj = {
+    text: inputArea.value,
+    completed: false,
+    id: null
   }
-});
 
-function createTask() {
-  let taskCont = document.createElement("div");
-  taskCont.classList.add("new-task-container");
-  let task = document.createElement("p");
-  task.id = "new-task";
-  task.classList.add("new-task-text");
-  addTextFromInput(task);
-  taskCont.appendChild(task);
-  createTaskNav(taskCont);
-  taskBox.appendChild(taskCont);
+  tasks.push(obj)
+
+  tasks.forEach(updateIds)
+  console.log(tasks);
+  
+  
+
+})
+function updateIds(element, index, array){
+  element.id = index
 }
-function createTaskNav(taskCont) {
-  let navCont = document.createElement("div");
-  navCont.classList.add("symbols-cont");
-  let done = document.createElement("div");
-  done.classList.add("symbol");
-  done.id='done-symbol'
-  done.textContent = "✔️";
-  navCont.appendChild(done);
-  let del = document.createElement("div");
-  del.classList.add("symbol");
-  del.id = 'del-symbol'
-  del.textContent = "✖️";
-  navCont.appendChild(del);
-  let edit = document.createElement("div");
-  edit.classList.add("symbol");
-  edit.id = 'edit-symbol'
-  edit.textContent = "✏️";
-  navCont.appendChild(edit);
-  taskCont.appendChild(navCont);
-}
-function delTask(task){
+
+
+
+
+function createTask(){
+  let taskCont=document.createElement('div')
+  let pCon=document.createElement('div')
+  let newParaghraph=document.createElement('p')
+  let optionsCont=document.createElement('div')
+  let done=document.createElement('div')
+  done.textContent='✅'
+  let del=document.createElement('div')
+  del.textContent='❎'
+  let edit=document.createElement('div')
+  edit.textContent='✍'
+  
+
+  return taskCont
   
 }
-function addTextFromInput(task) {
-  let cipka = inputArea.value;
-  task.textContent = cipka;
-}
+
+
+
+
+
+
+
+
+
 
 
 
