@@ -1,107 +1,116 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 10px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
 }
-button{
-    cursor: pointer;
-    border: none;
-    width: auto;
-    overflow: visible;
-    outline: none;
-    text-align: inherit;
+button {
+  cursor: pointer;
+  border: none;
+  width: auto;
+  overflow: visible;
+  outline: none;
+  text-align: inherit;
 }
-.bgc-div{
-    background-color: #333;
-    width: 100vw;   
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bgc-div {
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.container{
-    background-color: #a551eba6;
-    height: 70rem;
-    width: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.container {
+  background-color: #a551eba6;
+  height: 70rem;
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
-.text-box{
-    background-color: #00000050;
-    height: 10%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.text-box {
+  background-color: #00000050;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.user-input{
-    border: 1px solid black;
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 2rem;
-    text-align: center;
+.user-input {
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 2rem;
+  text-align: center;
+  user-select: none;
 }
-.task-button{
-    font-size: 1.6rem;
-    text-align: center;
-    align-self: center;
-    width: 20%;
-    height: 25%;
-    position: relative;
-    bottom: -15%;
-    transition: 0.1s;
+.task-button {
+  font-size: 1.6rem;
+  text-align: center;
+  align-self: center;
+  width: 20%;
+  height: 25%;
+  position: relative;
+  bottom: -15%;
+  transition: 0.1s;
+  user-select: none;
 }
-.task-box{
-    border: 2px solid black;
-    width: 90%;
-    height: 80%;
-    margin-bottom: 1%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.task-box {
+  border: 2px solid black;
+  width: 90%;
+  height: 80%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.task-grapper{
-    font-size: 1.6rem;
-    display: flex;
-    flex-direction: column;
+.task-grapper {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
 }
-button:hover{
-    background-color: #33333356;
-    color: rgb(131, 0, 218);
+button:hover {
+  background-color: #33333356;
+  color: rgb(131, 0, 218);
 }
-button:active{
-    width: 22%;
-    height: 29%;
-}
-
-.new-task-container{
-    border-bottom: 1px solid black;
-    width: 100%;
-    height: 8%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-}
-.new-task-text{
-    font-size: 3rem;
-    text-align: center;
+button:active {
+  width: 22%;
+  height: 29%;
 }
 
-.symbols-cont{
-    margin-right: 1%;
-    display: flex;
-    position: absolute;
-    right: 0px;
-    
-    
-
+.task-container {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
 }
-.symbol{
-    cursor: pointer;
-    font-size: 3rem;
+.task-text {
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
 }
 
+.task-options-container {
+  border: 1px solid black;
+  margin-right: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+
+  right: 0px;
+}
+.symbol {
+  cursor: pointer;
+  font-size: 3rem;
+  user-select: none;
+}
+.done{
+  text-decoration: line-through
+}
