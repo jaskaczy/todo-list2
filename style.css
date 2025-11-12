@@ -96,7 +96,6 @@ button:active {
 }
 
 .task-options-container {
-  border: 1px solid black;
   margin-right: 1%;
   display: flex;
   flex-direction: row;
@@ -113,4 +112,14 @@ button:active {
 }
 .done{
   text-decoration: line-through
+}
+.task-edit-input{
+  display: none;
+}
+
+.task-edit-input-editing{
+  font-size: 1rem;
+  display:block;
+ top: 50%;
+ left: 50%;
 }
